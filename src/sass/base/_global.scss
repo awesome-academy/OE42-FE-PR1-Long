@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+p, h6 {
+  font-size: 1rem;
+}
+
+.dropdown__submenu {
+  position: relative;
+  &:hover .dropdown-menu, &:focus .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute !important;
+    left: 100%;
+    top: -1px;
+  }
+}

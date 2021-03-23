@@ -1,0 +1,92 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-0
+  .container
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarInside' aria-controls='navbarInside' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarInside.collapse.navbar-collapse
+      ul.text-uppercase.navbar-nav
+        li.nav-item.dropdown
+          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='' data-bs-toggle="dropdown") Trang chủ
+          ul.p-9.dropdown-menu.dropdown-home
+            li.d-flex.flex-column.column
+              h6.py-4.m-0.column__title Máy khoan đa năng CNC
+              a.column__item(href='') Máy khoan CNC điện
+              a.column__item(href='') Máy phay đa năng 3R
+              a.column__item(href='') Máy hàn, cắt kim loại
+              a.column__item(href='') Máy in phun tích điện
+              a.column__item(href='') Máy ép gỗ chuẩn Nano
+            li.d-flex.flex-column.column
+              h6.py-4.m-0.column__title Máy cắt plasmar
+              a.column__item(href='') Máy khoan CNC điện
+              a.column__item(href='') Máy phay đa năng 3R
+              a.column__item(href='') Máy hàn, cắt kim loại
+              a.column__item(href='') Máy in phun tích điện
+              a.column__item(href='') Máy ép gỗ chuẩn Nano
+            li.d-flex.flex-column.column
+              h6.py-4.m-0.column__title Máy phay công nghiệp
+              a.column__item(href='') Máy khoan CNC điện
+              a.column__item(href='') Máy phay đa năng 3R
+              a.column__item(href='') Máy hàn, cắt kim loại
+              a.column__item(href='') Máy in phun tích điện
+              a.column__item(href='') Máy ép gỗ chuẩn Nano
+            li.column
+              img(src="./assets/images/dropdown-home.svg" width="100%" height="100%")
+            li.d-flex.flex-column.column
+              h6.py-4.m-0.column__title Máy ép nhựa thủ công
+              a.column__item(href='') Máy khoan CNC điện
+              a.column__item(href='') Máy phay đa năng 3R
+              a.column__item(href='') Máy hàn, cắt kim loại
+              a.column__item(href='') Máy in phun tích điện
+            li.d-flex.flex-column.column
+              h6.py-4.m-0.column__title Máy uốn tôn điện
+              a.column__item(href='') Máy khoan CNC điện
+              a.column__item(href='') Máy phay đa năng 3R
+              a.column__item(href='') Máy hàn, cắt kim loại
+              a.column__item(href='') Máy in phun tích điện
+            li.d-flex.flex-column.column
+              h6.py-4.m-0.column__title Máy nén khí CNC
+              a.column__item(href='') Máy khoan CNC điện
+              a.column__item(href='') Máy phay đa năng 3R
+              a.column__item(href='') Máy hàn, cắt kim loại
+              a.column__item(href='') Máy in phun tích điện
+        li.nav-item.dropdown
+          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='' data-bs-toggle="dropdown") Giới thiệu
+          ul.dropdown-menu.dropdown-intro
+            li.intro__item
+              a.py-5.intro__link(href='') Giới thiệu chung
+            li.intro__item.dropdown__submenu
+              a.py-5.intro__link(href='' data-bs-toggle="dropdown") Hệ thống cửa hàng
+              ul.dropdown-menu.p-0.dropdown-branch
+                li.branch__item
+                  a.py-5.branch__link(href='') Hệ thống cửa hàng A
+                li.branch__item
+                  a.py-5.branch__link(href='') Hệ thống cửa hàng B
+            li.intro__item
+              a.py-5.intro__link(href='') Chính sách ưu đãi
+            li.intro__item
+              a.py-5.intro__link(href='') Thông tin tuyển dụng
+        li.nav-item
+          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='') Sản phẩm
+        li.nav-item
+          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='') Tin khuyến mại
+        li.nav-item
+          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='') Dịch vụ
+        li.nav-item
+          a.nav-link.navigation-item.px-6.border-start.border-end.navigation-item--text(href='') Liên hệ
+      .dropdown.ms-auto
+        button.btn.btn--basket(data-bs-toggle="dropdown")
+          i.fas.fa-shopping-basket
+        ul.dropdown-menu.dropdown-menu-end.dropdown-shopping
+          - for (let i = 1; i <= 3; i++)
+            li.d-flex.align-items-center.shopping__item
+              img.px-5(src=`./assets/images/sample-basket-${i}.svg`)
+              .shopping__item-desc
+                p.mb-2.shopping__item-name MÁY KHOAN BLACK DECKER
+                p.text-danger.shopping__item-cost
+                  span.text-muted 1 x 
+                  | 1.250.000 Đ
+          li.text-end.text-uppercase.px-4
+            p.text-danger.total 
+              span.total Tổng tiền: 
+              | 4.560.000 Đ
+          li.text-end.px-4
+            button.text-white.text-uppercase.btn.btn--payment Thanh toán

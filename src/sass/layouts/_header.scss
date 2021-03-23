@@ -1,0 +1,46 @@
+.navigation-item--icon {
+  @include size(50px);
+  @include flexCenter();
+  &:hover {
+    background-color: $--color-theme-1;
+    border-color: $--color-theme-1;
+  };
+}
+.navigation-item--text {
+  height: 50px;
+  font-weight: 500;
+  @include flexBox(flex, center);
+  &:hover, &:focus {
+    background-color: $--color-theme-1;
+    border-color: $--color-theme-1;
+  };
+}
+.hotline {
+  .hotline__text, .hotline__number {
+    font-weight: 500;
+  }
+  .hotline__text {
+    color: $--color-theme-1;
+  }
+  .hotline__number {
+    color: $--color-gray-600;
+  }
+}
+.search {
+  .search__form {
+    border: 1px solid $--color-gray-500;
+  }
+  .search__field {
+    border: none;
+    outline: none;
+  }
+  .search__btn {
+    background-color: transparent;
+    color: $--color-gray-500;
+    border: none;
+    outline: none;
+    &:hover {
+      color: $--color-gray-600;
+    }
+  }
+}

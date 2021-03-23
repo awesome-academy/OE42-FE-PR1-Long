@@ -1,0 +1,118 @@
+.btn--basket {
+  color: $--color-white;
+  font-size: 1.28rem;
+  &:focus, &:hover {
+    color: $--color-theme-1;
+  }
+}
+.dropdown-home.show {
+  width: 1320px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 10px;
+  .column {
+    &:nth-of-type(4) {
+      grid-row: 1/3;
+      grid-column: 4;
+    }
+    &__title {
+      font-weight: 500;
+      color: $--color-gray-800;
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f009';
+        display: none;
+      }
+      svg {
+        color: $--color-theme-1;
+        margin-right: 8px;
+      }
+    }
+    &__item {
+      text-transform: none;
+      text-decoration: none;
+      color: $--color-gray-500;
+      padding: 0.5rem 0;
+      &:hover {
+        color: $--color-gray-700;
+      }
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f0de';
+        display: none;
+      }
+      svg {
+        margin-right: 10px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+  li img {
+    object-fit: cover;
+  }
+}
+.dropdown-intro {
+  width: 203px;
+  .intro__item {
+    width: 100%;
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f0de';
+      display: none;
+    }
+    &:hover {
+      background-color: $--color-theme-1;
+    }
+    svg {
+      color: $--color-gray-800;
+      margin-right: 10px;
+      transform: rotate(90deg);
+    }
+    &:hover > .intro__link, &:hover > svg  {
+      color: white;
+    }
+  }
+  .intro__link {
+    display: inline-block;
+    color: $--color-gray-800;
+    font-size: 0.93rem;
+    text-decoration: none;
+  }
+}
+.dropdown-branch {
+  @extend .dropdown-intro; 
+  .branch__item {
+    @extend .intro__item;
+  }
+  .branch__link {
+    @extend .intro__link;
+  }
+}
+.dropdown-shopping {
+  font-weight: 500;
+  .shopping__item {
+    width: 290px;
+    height: 120px;
+    & + .shopping__item {
+      border-top: 1px solid $--color-gray-200;
+    }
+    .shopping__item-desc {
+      line-height: 18px;
+      .shopping__item-name {
+        color: $--color-gray-800;
+      }
+    }
+  }
+  .total {
+    color: $--color-gray-800;
+  }
+  .btn--payment {
+    height: 40px;
+    width: 118px;
+    background-color: $--color-theme-1;
+  }
+}
