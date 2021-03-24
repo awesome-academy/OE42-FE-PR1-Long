@@ -1,8 +1,39 @@
 extends ../layouts/default
 block content
   section.banner
-    .container.row
-      #carouselBanner.col-8.carousel(data-bs-ride='carousel')
-        .mb-0.carousel-indicators
-          
-        
+    .container
+      .row
+        #carouselBanner.col-8.carousel(data-bs-ride='carousel')
+          .mb-0.carousel-indicators
+            button.carousel__button.active(type='button' data-bs-target='#carouselBanner' data-bs-slide-to=0 aria-current)
+            button.carousel__button(type='button' data-bs-target='#carouselBanner' data-bs-slide-to=1 aria-current)
+            button.carousel__button(type='button' data-bs-target='#carouselBanner' data-bs-slide-to=2 aria-current)
+          .carousel-inner.carousel-inner--ease-in-out
+            .carousel-item.active(data-bs-interval="2000")
+              img(src="./assets/images/banner.svg" width="100%" alt="")
+            .carousel-item(data-bs-interval="2000")
+              img(src="./assets/images/banner.svg" width="100%" alt="")
+            .carousel-item(data-bs-interval="2000")
+              img(src="./assets/images/banner.svg" width="100%" alt="")
+        .col.service
+          .d-flex.align-items-center.p-6.service__item
+            i.fas.fa-plane.me-4.service__item-icon
+            div
+              h5.fw-bold.text-uppercase.service__item-heading Miễn phí vận chuyển
+              p.m-0.service__item-desc Chúng tôi vận chuyển miễn phí với các đơn hàng trị giá trên 1000.000 Đ.
+          .d-flex.align-items-center.p-6.service__item
+            i.fas.fa-sync-alt.me-4.service__item-icon
+            div
+              h5.fw-bold.text-uppercase.service__item-heading Chính sách đổi trả
+              p.m-0.service__item-desc Nếu phát hiện lỗi của nhà sản xuất, chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên.
+          .d-flex.align-items-center.p-6.service__item
+            i.fas.fa-gift.me-4.service__item-icon
+            div
+              h5.fw-bold.text-uppercase.service__item-heading Khuyến mại hàng tuần
+              p.m-0.service__item-desc Mỗi thứ 7 hàng tuần đều có chương trình giảm giá và khuyến mại lớn.
+          .d-flex.align-items-center.p-6.service__item
+            i.fas.fa-thumbs-up.me-4.service__item-icon
+            div
+              h5.fw-bold.text-uppercase.service__item-heading Cam kết hàng chính hãng
+              p.m-0.service__item-desc Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm.
+
