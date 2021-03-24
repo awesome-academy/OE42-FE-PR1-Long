@@ -1,9 +1,9 @@
 extends ../layouts/default
 block content
-  section.banner
+  section.my-15.banner
     .container
       .row
-        #carouselBanner.col-8.carousel(data-bs-ride='carousel')
+        #carouselBanner.col-8.p-0.carousel(data-bs-ride='carousel')
           .mb-0.carousel-indicators
             button.carousel__button.active(type='button' data-bs-target='#carouselBanner' data-bs-slide-to=0 aria-current)
             button.carousel__button(type='button' data-bs-target='#carouselBanner' data-bs-slide-to=1 aria-current)
@@ -15,7 +15,7 @@ block content
               img(src="./assets/images/banner.svg" width="100%" alt="")
             .carousel-item(data-bs-interval="2000")
               img(src="./assets/images/banner.svg" width="100%" alt="")
-        .col.service
+        .col.border-start.border-end.p-0.service
           .d-flex.align-items-center.p-6.service__item
             i.fas.fa-plane.me-4.service__item-icon
             div
@@ -36,4 +36,131 @@ block content
             div
               h5.fw-bold.text-uppercase.service__item-heading Cam kết hàng chính hãng
               p.m-0.service__item-desc Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm.
-
+  section.mb-15.hot-products
+    .container
+      .hot-products__header
+        h4.d-inline-block.text-uppercase.mb-10.hot-products__title
+          i.fas.fa-th-large.me-4.hot-products__title-icon
+          | Sản phẩm nổi bật
+        .btn-group.float-end
+          button.me-3.btn.btn--prev
+            i.fas.fa-sort-up
+          button.btn.btn--next
+            i.fas.fa-sort-down
+      .hot-products__content
+        aside.hot-products__sidebar
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy khoan, cắt CNC  
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy in phun khổ lớn 
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy quét canon 3D
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy hàn điện Alunima 
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy Decameta 
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy đa năng CNC
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy mài, tiện DC 12V
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy khoan, cắt CNC  
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy quay thông minh N3 
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Motor R34C đa dụng 
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy in laser màu 3D 
+          .sidebar__item.px-5
+            h6.m-0
+              i.fas.fa-th-large.me-4
+              | Máy phay đa năng CNC 
+        .py-8.px-4.hot-products__card
+          img(src="./assets/images/sample-hot-product-1.svg")
+          p.text-danger.mb-2.card__cost 1.550.000 Đ
+          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
+          p
+            -for (let i = 0; i < 5; i++)
+              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+            i.ms-1.card__review-amount (12 đánh giá)
+          .card__btn-groups
+            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
+            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+        .py-8.px-4.hot-products__card
+          img(src="./assets/images/sample-hot-product-2.svg")
+          p.text-danger.mb-2.card__cost 1.550.000 Đ
+          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
+          p
+            -for (let i = 0; i < 5; i++)
+              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+            i.ms-1.card__review-amount (12 đánh giá)
+          .card__btn-groups
+            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
+            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+        .py-8.px-4.hot-products__card
+          img(src="./assets/images/sample-hot-product-3.svg")
+          p.text-danger.mb-2.card__cost 1.550.000 Đ
+          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
+          p
+            -for (let i = 0; i < 5; i++)
+              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+            i.ms-1.card__review-amount (12 đánh giá)
+          .card__btn-groups
+            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
+            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+        .py-8.px-4.hot-products__card
+          img(src="./assets/images/sample-hot-product-4.svg")
+          p.text-danger.mb-2.card__cost 1.550.000 Đ
+          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
+          p
+            -for (let i = 0; i < 5; i++)
+              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+            i.ms-1.card__review-amount (12 đánh giá)
+          .card__btn-groups
+            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
+            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+        .py-8.px-4.hot-products__card
+          img(src="./assets/images/sample-hot-product-5.svg")
+          p.text-danger.mb-2.card__cost 1.550.000 Đ
+          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
+          p
+            -for (let i = 0; i < 5; i++)
+              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+            i.ms-1.card__review-amount (12 đánh giá)
+          .card__btn-groups
+            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
+            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+        .py-8.px-4.hot-products__card
+          img(src="./assets/images/sample-hot-product-6.svg")
+          p.text-danger.mb-2.card__cost 1.550.000 Đ
+          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
+          p
+            -for (let i = 0; i < 5; i++)
+              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+            i.ms-1.card__review-amount (12 đánh giá)
+          .card__btn-groups
+            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
+            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+  section.new-products   
