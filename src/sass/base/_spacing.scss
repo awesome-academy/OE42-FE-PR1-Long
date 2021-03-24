@@ -1,0 +1,262 @@
+@for $i from 1 through 20 {
+  // padding
+	.p-#{$i} {
+      padding: $i * 0.25rem !important;
+  }
+  .ps-#{$i} {
+      padding-left: $i * 0.25rem !important;
+  }
+  .pe-#{$i} {
+      padding-right: $i * 0.25rem !important;
+  }
+  .pt-#{$i} {
+      padding-top: $i * 0.25rem !important;
+  }
+  .pb-#{$i} {
+      padding-bottom: $i * 0.25rem !important;
+  }
+  .px-#{$i} {
+      padding-left: $i * 0.25rem !important;
+      padding-right: $i * 0.25rem !important;
+  }
+  .py-#{$i} {
+      padding-top: $i * 0.25rem !important;
+      padding-bottom: $i * 0.25rem !important;
+  }
+  // margin
+  .m-#{$i} {
+      margin: $i * 0.25rem !important;
+  }
+  .ms-#{$i} {
+      margin-left: $i * 0.25rem !important;
+  }
+  .me-#{$i} {
+      margin-right: $i * 0.25rem !important;
+  }
+  .mt-#{$i} {
+      margin-top: $i * 0.25rem !important;
+  }
+  .mb-#{$i} {
+      margin-bottom: $i * 0.25rem !important;
+  }
+  .mx-#{$i} {
+      margin-left: $i * 0.25rem !important;
+      margin-right: $i * 0.25rem !important;
+  }
+  .my-#{$i} {
+      margin-top: $i * 0.25rem !important;
+      margin-bottom: $i * 0.25rem !important;
+  }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media screen and (min-width: 1200px) {
+  @for $i from 1 through 20 {
+      // padding
+      .p-lg-#{$i} {
+          padding: $i * 0.25rem !important;
+      }
+      .ps-lg-#{$i} {
+          padding-left: $i * 0.25rem !important;
+      }
+      .pe-lg-#{$i} {
+          padding-right: $i * 0.25rem !important;
+      }
+      .pt-lg-#{$i} {
+          padding-top: $i * 0.25rem !important;
+      }
+      .pb-lg-#{$i} {
+          padding-bottom: $i * 0.25rem !important;
+      }
+      .px-lg-#{$i} {
+          padding-left: $i * 0.25rem !important;
+          padding-right: $i * 0.25rem !important;
+      }
+      .py-lg-#{$i} {
+          padding-top: $i * 0.25rem !important;
+          padding-bottom: $i * 0.25rem !important;
+      }
+      // margin
+      .m-lg-#{$i} {
+          margin: $i * 0.25rem !important;
+      }
+      .ms-lg-#{$i} {
+          margin-left: $i * 0.25rem !important;
+      }
+      .me-lg-#{$i} {
+          margin-right: $i * 0.25rem !important;
+      }
+      .mt-lg-#{$i} {
+          margin-top: $i * 0.25rem !important;
+      }
+      .mb-lg-#{$i} {
+          margin-bottom: $i * 0.25rem !important;
+      }
+      .mx-lg-#{$i} {
+          margin-left: $i * 0.25rem !important;
+          margin-right: $i * 0.25rem !important;
+      }
+      .my-lg-#{$i} {
+          margin-top: $i * 0.25rem !important;
+          margin-bottom: $i * 0.25rem !important;
+      }
+  }
+}
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px) {
+  @for $i from 1 through 20 {
+      // padding
+      .p-md-#{$i} {
+          padding: $i * 0.25rem !important;
+      }
+      .ps-md-#{$i} {
+          padding-left: $i * 0.25rem !important;
+      }
+      .pe-md-#{$i} {
+          padding-right: $i * 0.25rem !important;
+      }
+      .pt-md-#{$i} {
+          padding-top: $i * 0.25rem !important;
+      }
+      .pb-md-#{$i} {
+          padding-bottom: $i * 0.25rem !important;
+      }
+      .px-md-#{$i} {
+          padding-left: $i * 0.25rem !important;
+          padding-right: $i * 0.25rem !important;
+      }
+      .py-md-#{$i} {
+          padding-top: $i * 0.25rem !important;
+          padding-bottom: $i * 0.25rem !important;
+      }
+      // margin
+      .m-md-#{$i} {
+          margin: $i * 0.25rem !important;
+      }
+      .ms-md-#{$i} {
+          margin-left: $i * 0.25rem !important;
+      }
+      .me-md-#{$i} {
+          margin-right: $i * 0.25rem !important;
+      }
+      .mt-md-#{$i} {
+          margin-top: $i * 0.25rem !important;
+      }
+      .mb-md-#{$i} {
+          margin-bottom: $i * 0.25rem !important;
+      }
+      .mx-md-#{$i} {
+          margin-left: $i * 0.25rem !important;
+          margin-right: $i * 0.25rem !important;
+      }
+      .my-md-#{$i} {
+          margin-top: $i * 0.25rem !important;
+          margin-bottom: $i * 0.25rem !important;
+      }
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) {
+  @for $i from 1 through 20 {
+      // padding
+      .p-sm-#{$i} {
+          padding: $i * 0.25rem !important;
+      }
+      .ps-sm-#{$i} {
+          padding-left: $i * 0.25rem !important;
+      }
+      .pe-sm-#{$i} {
+          padding-right: $i * 0.25rem !important;
+      }
+      .pt-sm-#{$i} {
+          padding-top: $i * 0.25rem !important;
+      }
+      .pb-sm-#{$i} {
+          padding-bottom: $i * 0.25rem !important;
+      }
+      .px-sm-#{$i} {
+          padding-left: $i * 0.25rem !important;
+          padding-right: $i * 0.25rem !important;
+      }
+      .py-sm-#{$i} {
+          padding-top: $i * 0.25rem !important;
+          padding-bottom: $i * 0.25rem !important;
+      }
+      // margin
+      .m-sm-#{$i} {
+          margin: $i * 0.25rem !important;
+      }
+      .ms-sm-#{$i} {
+          margin-left: $i * 0.25rem !important;
+      }
+      .me-sm-#{$i} {
+          margin-right: $i * 0.25rem !important;
+      }
+      .mt-sm-#{$i} {
+          margin-top: $i * 0.25rem !important;
+      }
+      .mb-sm-#{$i} {
+          margin-bottom: $i * 0.25rem !important;
+      }
+      .mx-sm-#{$i} {
+          margin-left: $i * 0.25rem !important;
+          margin-right: $i * 0.25rem !important;
+      }
+      .my-sm-#{$i} {
+          margin-top: $i * 0.25rem !important;
+          margin-bottom: $i * 0.25rem !important;
+      }
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {
+  @for $i from 1 through 20 {
+      // padding
+      .p-xs-#{$i} {
+          padding: $i * 0.25rem !important;
+      }
+      .ps-xs-#{$i} {
+          padding-left: $i * 0.25rem !important;
+      }
+      .pe-xs-#{$i} {
+          padding-right: $i * 0.25rem !important;
+      }
+      .pt-xs-#{$i} {
+          padding-top: $i * 0.25rem !important;
+      }
+      .pb-xs-#{$i} {
+          padding-bottom: $i * 0.25rem !important;
+      }
+      .px-xs-#{$i} {
+          padding-left: $i * 0.25rem !important;
+          padding-right: $i * 0.25rem !important;
+      }
+      .py-xs-#{$i} {
+          padding-top: $i * 0.25rem !important;
+          padding-bottom: $i * 0.25rem !important;
+      }
+      // margin
+      .m-xs-#{$i} {
+          margin: $i * 0.25rem !important;
+      }
+      .ms-xs-#{$i} {
+          margin-left: $i * 0.25rem !important;
+      }
+      .me-xs-#{$i} {
+          margin-right: $i * 0.25rem !important;
+      }
+      .mt-xs-#{$i} {
+          margin-top: $i * 0.25rem !important;
+      }
+      .mb-xs-#{$i} {
+          margin-bottom: $i * 0.25rem !important;
+      }
+      .mx-xs-#{$i} {
+          margin-left: $i * 0.25rem !important;
+          margin-right: $i * 0.25rem !important;
+      }
+      .my-xs-#{$i} {
+          margin-top: $i * 0.25rem !important;
+          margin-bottom: $i * 0.25rem !important;
+      }
+  }
+}
