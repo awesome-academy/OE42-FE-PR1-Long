@@ -1,0 +1,33 @@
+.banner {
+  .carousel__button {
+    width: 10px;
+    height: 10px;
+    background-color: $--color-gray-500;
+    &.active {
+      background-color: $--color-gray-700;
+    }
+  }
+  .carousel-inner--ease-in-out {
+    .carousel-item {
+      display: block;
+      opacity: 0;
+    }
+    .active {
+      transition: all 0.6s ease-in-out;
+      opacity: 1;
+    }
+  }
+}
+.service {
+  display: grid;
+  grid-template-columns: 1fr;
+  &__item {
+    &-icon {
+      color: $--color-theme-1;
+      font-size: 2.14rem; 
+    }
+    &:nth-of-type(1) &-icon {
+      transform: rotate(-45deg);
+    }
+  }
+}
