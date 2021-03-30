@@ -5,8 +5,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-0
     #navbarInside.collapse.navbar-collapse
       ul.text-uppercase.navbar-nav
         li.nav-item.dropdown
-          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='' data-bs-toggle="dropdown") Trang chủ
-          ul.p-9.dropdown-menu.dropdown-home
+          a.nav-link.navigation-item.px-6.navigation-item--text.navigation-item--dark(href='' data-bs-toggle="dropdown") Trang chủ
+          ul.p-9.dropdown-menu.dropdown-home-top
             li.d-flex.flex-column.column
               h6.py-4.m-0.column__title Máy khoan đa năng CNC
               a.column__item(href='') Máy khoan CNC điện
@@ -28,7 +28,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-0
               a.column__item(href='') Máy hàn, cắt kim loại
               a.column__item(href='') Máy in phun tích điện
               a.column__item(href='') Máy ép gỗ chuẩn Nano
-            li.column
+            li.column.d-lg-inline-block.d-none
               img(src="./assets/images/dropdown-home.svg" width="100%" height="100%")
             li.d-flex.flex-column.column
               h6.py-4.m-0.column__title Máy ép nhựa thủ công
@@ -49,7 +49,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-0
               a.column__item(href='') Máy hàn, cắt kim loại
               a.column__item(href='') Máy in phun tích điện
         li.nav-item.dropdown
-          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='' data-bs-toggle="dropdown") Giới thiệu
+          a.nav-link.navigation-item.px-6.navigation-item--text.navigation-item--dark(href='' data-bs-toggle="dropdown") Giới thiệu
           ul.dropdown-menu.dropdown-intro
             li.intro__item
               a.py-5.intro__link(href='') Giới thiệu chung
@@ -65,15 +65,15 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-0
             li.intro__item
               a.py-5.intro__link(href='') Thông tin tuyển dụng
         li.nav-item
-          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='') Sản phẩm
+          a.nav-link.navigation-item.px-6.navigation-item--text.navigation-item--dark(href='') Sản phẩm
         li.nav-item
-          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='') Tin khuyến mại
+          a.nav-link.navigation-item.px-6.navigation-item--text.navigation-item--dark(href='') Tin khuyến mại
         li.nav-item
-          a.nav-link.navigation-item.px-6.border-start.navigation-item--text(href='') Dịch vụ
+          a.nav-link.navigation-item.px-6.navigation-item--text.navigation-item--dark(href='') Dịch vụ
         li.nav-item
-          a.nav-link.navigation-item.px-6.border-start.border-end.navigation-item--text(href='') Liên hệ
+          a.nav-link.navigation-item.px-6.navigation-item--text.navigation-item--dark(href='') Liên hệ
       .dropdown.ms-auto
-        button.btn.btn--basket(data-bs-toggle="dropdown")
+        button.px-6.btn.btn--basket(data-bs-toggle="dropdown")
           i.fas.fa-shopping-basket
         ul.dropdown-menu.dropdown-menu-end.dropdown-shopping
           - for (let i = 1; i <= 3; i++)

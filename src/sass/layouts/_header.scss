@@ -15,6 +15,17 @@
     border-color: $--color-theme-1;
   };
 }
+.nav-item {
+  .navigation-item--dark {
+    border-left: 1px solid $--color-white; 
+    @include maxWidth(lg) {
+      border: none !important;
+    }
+  }
+  &:nth-last-of-type(1) .navigation-item--dark {
+    border-right: 1px solid $--color-white;
+  }
+}
 .hotline {
   .hotline__text, .hotline__number {
     font-weight: 500;
@@ -29,10 +40,16 @@
 .search {
   .search__form {
     border: 1px solid $--color-gray-500;
+    @include maxWidth(lg) {
+      width: 140px;
+    }
   }
   .search__field {
     border: none;
     outline: none;
+    @include maxWidth(lg) {
+      width: 60px;
+    }
   }
   .search__btn {
     background-color: transparent;

@@ -1,36 +1,32 @@
 .banner {
   .carousel__button {
-    width: 10px;
-    height: 10px;
-    background-color: $--color-gray-500;
+    @include btn($--color-gray-500, null, 10px, 10px);
     &.active {
       background-color: $--color-gray-700;
     }
   }
-  .carousel-inner--ease-in-out {
-    .carousel-item {
-      display: block;
-      opacity: 0;
-    }
-    .active {
-      transition: all 0.6s ease-in-out;
-      opacity: 1;
-    }
-  }
 }
 .service {
-  display: grid;
-  grid-template-columns: 1fr;
+  @include gridLayout(grid, 1);
   &__item {
     &:hover {
       background-color: $--color-theme-1;
       .service__item-icon, .service__item-heading, .service__item-desc {
         color: $--color-white;
       }
+      .service__item-heading {
+        font-weight: 700;
+        @include maxWidth(lg) {
+          font-weight: 400;
+        }
+      }
     }
     &-icon {
       color: $--color-theme-1;
       font-size: 2.14rem; 
+      @include maxWidth(lg) {
+        font-size: 1.8rem;
+      }
     }
     &:nth-of-type(1) &-icon {
       transform: rotate(-45deg);
@@ -40,36 +36,24 @@
 .hot-products {
   &__header {
     .btn--prev, .btn--next {
-      color: $--color-gray-600;
-      font-size: 1.1rem;
-      border: 1px solid $--color-gray-600;
-      border-radius: 0px;
-      box-shadow: none;
+      @include btnOutline($--color-gray-600, $--color-gray-900, null, null, 0, $--color-gray-400, 1.1rem);
       transform: rotate(-90deg);
-      &:hover, &:focus {
-        background-color: $--color-gray-900;
-        color: $--color-gray-400;
-        border-color: $--color-gray-900;
-      }
-    }
-  }
-  &__title {
-    font-weight: 500;
-    &-icon {
-      color: $--color-theme-1;
     }
   }
   &__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    @include gridLayout(grid, 4, null, row, 30px);
+    @include maxWidth(xl) {
+      gap: 15px;
+    }
+    @include maxWidth(lg) {
+      @include gridLayout(grid, 3, null, row, 30px);
+    }
   }
   &__sidebar {
+    @include gridLayout(grid, 1);
     height: 100%;
     max-height: 714px;
-    grid-row: 1/3;
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-row: 1/4;
     box-shadow: 0px 1px 2.5px $--color-gray-500;
     border: 1px solid rgba(235,235,235,0.5);
     .sidebar__item {
@@ -83,43 +67,89 @@
       }
     }
   }
-  &__card {
-    @include flexBox(flex, center, start, column);
-    width: 100%;
-    max-width: 280px;
-    min-height: 325px;
-    justify-self: center;
-    box-shadow: 0px 1px 7.5px rgba(0,0,0,0.1);
-    transition: all 0.5s;
-    .card__cost, .card__name-product {
-      font-weight: 500;
+}
+.products-release {
+  &__header {
+    @extend .hot-products__header;
+    .btn--categories {
+      @include btnOutline($--color-gray-600, $--color-theme-1, null, null, 0, white);
+    } 
+  }
+  &__list-products {
+    @include gridLayout(grid, 3, null, row, 6%);
+    @include maxWidth(xl) {
+      gap: 3%;
     }
-    .card__rate {
-      color: $--color-theme-1;
+  }
+  .card--vertical {
+    max-width: 100%;
+  }
+}
+.best-sellers {
+  &__header {
+    @extend .products-release__header;
+  }
+  &__list-products {
+    @include gridLayout(grid, 4, 2, column, 30px);
+    @include maxWidth(xl) {
+      @include gridLayout(grid, 3, 3, column, 16px);
     }
-    .card__review-amount {
-      color: $--color-gray-600;
+  }
+  .card--vertical:nth-of-type(3) {
+    grid-row: 1/3;
+    grid-column: 2/4;
+    max-width: 563px;
+    @include maxWidth(xl) {
+      grid-row: 1/3;
+      grid-column: 1/3;
     }
-    .card__btn-groups {
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.5s;
-      .btn--buy-now {
-        width: 110px;
-        height: 40px;
-        background-color: $--color-theme-1;
-      }
-      .btn--detail {
-        @extend .btn--buy-now;
-        background-color: $--color-gray-800;
-      }
+  }
+  &__banner {
+    background: url('../images/banner-best-sellers.png') no-repeat left;
+    background-size: cover;
+    height: 200px;
+    .banner__desc {
+      @include flexBox(flex, center, center, column);
     }
-    &:hover {
-      transform: scale(1.02);
-      .card__btn-groups {
-        visibility: visible;
-        opacity: 1;
-      }
+    .btn--buy-now {
+      @include btn($--color-theme-1, $--color-theme-1-400, null, null, null, white)
     }
+    .btn--detail {
+      @include btnOutline($--color-gray-800, $--color-gray-800)
+    }
+  }
+}
+.new-arrivals {
+  &__header {
+    @extend .products-release__header;
+  }
+  &__content {
+    @include gridLayout(grid, 2, null, row, 30px);
+  }
+}
+.brands {
+  background-color: $--color-gray-300;
+  &__list-logos {
+    &.active {
+      @include gridLayout(grid, 5, null, row, 0, center)
+    }
+  }
+  .carousel-inner--transition {
+    transition: 0.5s;
+  }
+  .carousel-control-prev--gray, .carousel-control-next--gray {
+    color: $--color-gray-800;
+    font-size: 2rem;
+  }
+}
+.advertising-news {
+  background-image: url('../images/bg-advertising-news.svg');
+  background-color: #252525;
+  background-blend-mode: screen;
+  .field-email {
+    width: 615px;
+  }
+  .btn--register {
+    @include btn($--color-theme-1, $--color-theme-1-400, null, null, 25rem, white)
   }
 }

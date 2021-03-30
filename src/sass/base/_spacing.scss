@@ -52,6 +52,59 @@
 @media screen and (min-width: 1200px) {
   @for $i from 1 through 20 {
       // padding
+      .p-xl-#{$i} {
+          padding: $i * 0.25rem !important;
+      }
+      .ps-xl-#{$i} {
+          padding-left: $i * 0.25rem !important;
+      }
+      .pe-xl-#{$i} {
+          padding-right: $i * 0.25rem !important;
+      }
+      .pt-xl-#{$i} {
+          padding-top: $i * 0.25rem !important;
+      }
+      .pb-xl-#{$i} {
+          padding-bottom: $i * 0.25rem !important;
+      }
+      .px-xl-#{$i} {
+          padding-left: $i * 0.25rem !important;
+          padding-right: $i * 0.25rem !important;
+      }
+      .py-xl-#{$i} {
+          padding-top: $i * 0.25rem !important;
+          padding-bottom: $i * 0.25rem !important;
+      }
+      // margin
+      .m-xl-#{$i} {
+          margin: $i * 0.25rem !important;
+      }
+      .ms-xl-#{$i} {
+          margin-left: $i * 0.25rem !important;
+      }
+      .me-xl-#{$i} {
+          margin-right: $i * 0.25rem !important;
+      }
+      .mt-xl-#{$i} {
+          margin-top: $i * 0.25rem !important;
+      }
+      .mb-xl-#{$i} {
+          margin-bottom: $i * 0.25rem !important;
+      }
+      .mx-xl-#{$i} {
+          margin-left: $i * 0.25rem !important;
+          margin-right: $i * 0.25rem !important;
+      }
+      .my-xl-#{$i} {
+          margin-top: $i * 0.25rem !important;
+          margin-bottom: $i * 0.25rem !important;
+      }
+  }
+}
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px) {
+  @for $i from 1 through 20 {
+      // padding
       .p-lg-#{$i} {
           padding: $i * 0.25rem !important;
       }
@@ -101,8 +154,8 @@
       }
   }
 }
-// Large devices (desktops, 992px and up)
-@media screen and (min-width: 992px) {
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) {
   @for $i from 1 through 20 {
       // padding
       .p-md-#{$i} {
@@ -154,8 +207,8 @@
       }
   }
 }
-// Medium devices (tablets, 768px and up)
-@media screen and (min-width: 768px) {
+// mdall devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {
   @for $i from 1 through 20 {
       // padding
       .p-sm-#{$i} {
@@ -202,59 +255,6 @@
           margin-right: $i * 0.25rem !important;
       }
       .my-sm-#{$i} {
-          margin-top: $i * 0.25rem !important;
-          margin-bottom: $i * 0.25rem !important;
-      }
-  }
-}
-// Small devices (landscape phones, 576px and up)
-@media screen and (min-width: 576px) {
-  @for $i from 1 through 20 {
-      // padding
-      .p-xs-#{$i} {
-          padding: $i * 0.25rem !important;
-      }
-      .ps-xs-#{$i} {
-          padding-left: $i * 0.25rem !important;
-      }
-      .pe-xs-#{$i} {
-          padding-right: $i * 0.25rem !important;
-      }
-      .pt-xs-#{$i} {
-          padding-top: $i * 0.25rem !important;
-      }
-      .pb-xs-#{$i} {
-          padding-bottom: $i * 0.25rem !important;
-      }
-      .px-xs-#{$i} {
-          padding-left: $i * 0.25rem !important;
-          padding-right: $i * 0.25rem !important;
-      }
-      .py-xs-#{$i} {
-          padding-top: $i * 0.25rem !important;
-          padding-bottom: $i * 0.25rem !important;
-      }
-      // margin
-      .m-xs-#{$i} {
-          margin: $i * 0.25rem !important;
-      }
-      .ms-xs-#{$i} {
-          margin-left: $i * 0.25rem !important;
-      }
-      .me-xs-#{$i} {
-          margin-right: $i * 0.25rem !important;
-      }
-      .mt-xs-#{$i} {
-          margin-top: $i * 0.25rem !important;
-      }
-      .mb-xs-#{$i} {
-          margin-bottom: $i * 0.25rem !important;
-      }
-      .mx-xs-#{$i} {
-          margin-left: $i * 0.25rem !important;
-          margin-right: $i * 0.25rem !important;
-      }
-      .my-xs-#{$i} {
           margin-top: $i * 0.25rem !important;
           margin-bottom: $i * 0.25rem !important;
       }

@@ -1,0 +1,32 @@
+mixin cardVertical(data)
+  .py-8.px-4.card.card--vertical
+    img.card__img(src=`${data.img}`)
+    p.text-danger.mb-2.card__cost= data.cost
+    h6.text-xl-start.text-center.mb-2.card__name-product= data.nameProduct
+    p
+      -for (let i = 0; i < 5; i++)
+        i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+      i.ms-1.card__review-amount= `(${data.reviewAmount} đánh giá)`
+    .d-flex.flex-xl-row.flex-column.card__btn-groups
+      button.text-white.text-uppercase.mb-xl-0.mb-1.me-xl-1.me-0.btn.btn--buy-now Mua ngay
+      button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+
+mixin cardHorizontal(data)
+  .p-3.card.card--horizontal
+    img(src=`${data.img}` width="180px")
+    .card-body
+      h6.mb-2= data.nameProduct
+      p.mb-2
+        -for (let i = 0; i < 5; i++)
+          i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
+        i.ms-1.card__review-amount= `(${data.reviewAmount} đánh giá)`
+      p.mb-2.card__preview= data.preview
+      h5.text-danger.mb-2.card__cost= data.cost
+      .card__btn-groups
+        button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
+        button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
+
+mixin mainTitle(title, heading='h4')
+  #{heading}.d-inline-block.text-uppercase.main-title 
+    i.fas.fa-th-large.me-4.main-title__icon
+    = title

@@ -16,32 +16,30 @@ block content
             .carousel-item(data-bs-interval="2000")
               img(src="./assets/images/banner.svg" width="100%" alt="")
         .col.border-start.border-end.p-0.service
-          .d-flex.align-items-center.p-6.service__item
+          .d-flex.align-items-center.p-xl-6.p-lg-4.p-2.service__item
             i.fas.fa-plane.me-4.service__item-icon
             div
-              h5.fw-bold.text-uppercase.service__item-heading Miễn phí vận chuyển
-              p.m-0.service__item-desc Chúng tôi vận chuyển miễn phí với các đơn hàng trị giá trên 1000.000 Đ.
-          .d-flex.align-items-center.p-6.service__item
+              h5.text-uppercase.service__item-heading Miễn phí vận chuyển
+              p.d-lg-block.d-none.m-0.service__item-desc Chúng tôi vận chuyển miễn phí với các đơn hàng trị giá trên 1000.000 Đ.
+          .d-flex.align-items-center.p-xl-6.p-lg-4.p-2.service__item
             i.fas.fa-sync-alt.me-4.service__item-icon
             div
-              h5.fw-bold.text-uppercase.service__item-heading Chính sách đổi trả
-              p.m-0.service__item-desc Nếu phát hiện lỗi của nhà sản xuất, chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên.
-          .d-flex.align-items-center.p-6.service__item
+              h5.text-uppercase.service__item-heading Chính sách đổi trả
+              p.d-lg-block.d-none.m-0.service__item-desc Nếu phát hiện lỗi của nhà sản xuất, chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên.
+          .d-flex.align-items-center.p-xl-6.p-lg-4.p-2.service__item
             i.fas.fa-gift.me-4.service__item-icon
             div
-              h5.fw-bold.text-uppercase.service__item-heading Khuyến mại hàng tuần
-              p.m-0.service__item-desc Mỗi thứ 7 hàng tuần đều có chương trình giảm giá và khuyến mại lớn.
-          .d-flex.align-items-center.p-6.service__item
+              h5.text-uppercase.service__item-heading Khuyến mại hàng tuần
+              p.d-lg-block.d-none.m-0.service__item-desc Mỗi thứ 7 hàng tuần đều có chương trình giảm giá và khuyến mại lớn.
+          .d-flex.align-items-center.p-xl-6.p-lg-4.p-2.service__item
             i.fas.fa-thumbs-up.me-4.service__item-icon
             div
-              h5.fw-bold.text-uppercase.service__item-heading Cam kết hàng chính hãng
-              p.m-0.service__item-desc Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm.
+              h5.text-uppercase.service__item-heading Cam kết hàng chính hãng
+              p.d-lg-block.d-none.m-0.service__item-desc Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm.
   section.mb-15.hot-products
     .container
-      .hot-products__header
-        h4.d-inline-block.text-uppercase.mb-10.hot-products__title
-          i.fas.fa-th-large.me-4.hot-products__title-icon
-          | Sản phẩm nổi bật
+      .mb-10.hot-products__header
+        +mainTitle('Sản phẩm nổi bật')
         .btn-group.float-end
           button.me-3.btn.btn--prev
             i.fas.fa-sort-up
@@ -97,70 +95,99 @@ block content
             h6.m-0
               i.fas.fa-th-large.me-4
               | Máy phay đa năng CNC 
-        .py-8.px-4.hot-products__card
-          img(src="./assets/images/sample-hot-product-1.svg")
-          p.text-danger.mb-2.card__cost 1.550.000 Đ
-          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
-          p
-            -for (let i = 0; i < 5; i++)
-              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
-            i.ms-1.card__review-amount (12 đánh giá)
-          .card__btn-groups
-            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
-            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
-        .py-8.px-4.hot-products__card
-          img(src="./assets/images/sample-hot-product-2.svg")
-          p.text-danger.mb-2.card__cost 1.550.000 Đ
-          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
-          p
-            -for (let i = 0; i < 5; i++)
-              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
-            i.ms-1.card__review-amount (12 đánh giá)
-          .card__btn-groups
-            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
-            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
-        .py-8.px-4.hot-products__card
-          img(src="./assets/images/sample-hot-product-3.svg")
-          p.text-danger.mb-2.card__cost 1.550.000 Đ
-          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
-          p
-            -for (let i = 0; i < 5; i++)
-              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
-            i.ms-1.card__review-amount (12 đánh giá)
-          .card__btn-groups
-            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
-            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
-        .py-8.px-4.hot-products__card
-          img(src="./assets/images/sample-hot-product-4.svg")
-          p.text-danger.mb-2.card__cost 1.550.000 Đ
-          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
-          p
-            -for (let i = 0; i < 5; i++)
-              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
-            i.ms-1.card__review-amount (12 đánh giá)
-          .card__btn-groups
-            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
-            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
-        .py-8.px-4.hot-products__card
-          img(src="./assets/images/sample-hot-product-5.svg")
-          p.text-danger.mb-2.card__cost 1.550.000 Đ
-          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
-          p
-            -for (let i = 0; i < 5; i++)
-              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
-            i.ms-1.card__review-amount (12 đánh giá)
-          .card__btn-groups
-            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
-            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
-        .py-8.px-4.hot-products__card
-          img(src="./assets/images/sample-hot-product-6.svg")
-          p.text-danger.mb-2.card__cost 1.550.000 Đ
-          h6.mb-2.card__name-product MÁY KHOAN BLACK DECKER
-          p
-            -for (let i = 0; i < 5; i++)
-              i.card__rate(class=`${i < 4 ? 'fas fa-star' : 'far fa-star'}`)
-            i.ms-1.card__review-amount (12 đánh giá)
-          .card__btn-groups
-            button.text-white.text-uppercase.me-1.btn.btn--buy-now Mua ngay
-            button.text-white.text-uppercase.btn.btn--detail Xem chi tiết
-  section.new-products   
+        each el in hotProductCards
+          +cardVertical(el)
+  section.mb-15.products-release
+    .container
+      .mb-10.products-release__header
+        +mainTitle('Sản phẩm mới')
+        .float-end
+          .btn-group
+            button.me-2.btn.btn-outline-primary.btn--categories Máy khoan
+            button.me-2.btn.btn-outline-primary.btn--categories Máy in 3D
+            button.me-2.btn.btn-outline-primary.btn--categories Máy CNC
+            button.me-2.btn.btn-outline-primary.btn--categories Máy tiện
+            button.me-5.btn.btn-outline-primary.btn--categories Máy khác
+          .btn-group
+            button.me-3.btn.btn--prev
+              i.fas.fa-sort-up
+            button.btn.btn--next
+              i.fas.fa-sort-down
+      .products-release__content
+        .products-release__list-products.mb-7
+          each el in productsReleaseCards
+            +cardVertical(el)
+        .row.products-release__list-banner
+          a.col.d-inline-block(href="")
+            img(src="./assets/images/banner-new-product-1.svg" width="100%" alt="")
+          a.col.d-inline-block.float-end(href="")
+            img(src="./assets/images/banner-new-product-2.svg" width="100%" alt="")
+  section.mb-15.best-sellers
+    .container
+      .mb-10.best-sellers__header
+        +mainTitle('Sản phẩm bán chạy')
+        .float-end
+          .btn-group
+            button.me-2.btn.btn-outline-primary.btn--categories Máy khoan
+            button.me-2.btn.btn-outline-primary.btn--categories Máy in 3D
+            button.me-2.btn.btn-outline-primary.btn--categories Máy CNC
+            button.me-2.btn.btn-outline-primary.btn--categories Máy tiện
+            button.me-5.btn.btn-outline-primary.btn--categories Máy khác
+          .btn-group
+            button.me-3.btn.btn--prev
+              i.fas.fa-sort-up
+            button.btn.btn--next
+              i.fas.fa-sort-down
+      .best-sellers__content
+        .mb-10.best-sellers__list-products
+          each el in bestSellerCards
+            +cardVertical(el)
+        .d-lg-block.d-none.w-100.best-sellers__banner
+          .w-50.h-100.ms-auto.banner__desc
+            h2.text-uppercase Rocket wokaru
+            h5.text-center.mb-3 Máy cắt, khoan đa năng tích hợp điều khiển từ xa loại nhỏ 
+              br 
+              | thích hợp với các hộ gia đình
+            .btn-groups
+              button.text-uppercase.btn.btn--buy-now Mua ngay 
+              button.text-uppercase.btn.btn--detail Chi tiết
+  section.mb-15.new-arrivals
+    .container
+      .mb-10.new-arrivals__header
+        +mainTitle('Hàng mới về')
+        .float-end
+          .btn-group
+            button.me-3.btn.btn--prev
+              i.fas.fa-sort-up
+            button.btn.btn--next
+              i.fas.fa-sort-down
+      .new-arrivals__content
+        each el in newArrivalCards
+          +cardHorizontal(el)
+  section.py-12.brands
+    .container 
+      #carouselBrand.carousel.slide(data-bs-ride="carousel")
+        .carousel-inner.carousel-inner--ease-in-out
+          .carousel-item.brands__list-logos.active
+            img(src="./assets/images/brand-1.svg")
+            img(src="./assets/images/brand-2.svg")
+            img(src="./assets/images/brand-3.svg")
+            img(src="./assets/images/brand-4.svg")
+            img(src="./assets/images/brand-5.svg")
+          .carousel-item.brands__list-logos
+            img(src="./assets/images/brand-2.svg")
+            img(src="./assets/images/brand-1.svg")
+            img(src="./assets/images/brand-3.svg")
+            img(src="./assets/images/brand-5.svg")
+            img(src="./assets/images/brand-4.svg")
+        button.justify-content-start.carousel-control-prev.carousel-control-prev--gray(data-bs-target="#carouselBrand" data-bs-slide="prev")
+          i.fas.fa-chevron-left
+          span.visually-hidden
+        button.justify-content-end.carousel-control-next.carousel-control-prev--gray(data-bs-target="#carouselBrand" data-bs-slide="next")
+          i.fas.fa-chevron-right
+          span.visually-hidden
+  section.pt-20.pb-14.advertising-news
+    h3.text-white.fw-light.text-center.mb-8 Đăng kí để nhận tin tức khuyến mại hàng tuần
+    form.text-center(action="")
+      input.p-4.border-0.rounded-pill.me-3.field-email(type="text" placeholder="Nhập email của bạn") 
+      button.py-4.px-10.btn.btn--register Đăng kí

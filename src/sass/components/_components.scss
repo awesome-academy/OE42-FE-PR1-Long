@@ -1,0 +1,125 @@
+@mixin btn($mainColor, $effectColor: null, $width: null, $height: null, $rounded: null, $effectTextColor: white, $font-size: 1rem) {
+  width: $width;
+  height: $height;
+  background-color: $mainColor;
+  color: $effectTextColor;
+  font-size: $font-size;
+  border-radius: $rounded;
+  transition: all 0.4s;
+  box-shadow: none;
+  &:hover, &:focus {
+    background-color: $effectColor;
+  }
+}
+
+@mixin btnOutline($mainColor, $effectColor: null, $width: null, $height: null, $rounded: null, $effectTextColor: white, $font-size: 1rem) {
+  width: $width;
+  height: $height;
+  color: $mainColor;
+  border: 1px solid $mainColor;
+  border-radius: $rounded;
+  box-shadow: none;
+  transition: all 0.4s;
+  &:hover, &:focus {
+    color: $effectTextColor;
+    background-color: $effectColor;
+    border-color: $effectColor;
+  }
+}
+
+.main-title {
+  font-weight: 500;
+  &__icon {
+    color: $--color-theme-1;
+  }
+}
+
+.card--vertical{
+  @include flexBox(flex, center, center, column);
+  width: 100%;
+  max-width: 280px;
+  min-height: 325px;
+  justify-self: center;
+  box-shadow: 0px 1px 7.5px rgba(0,0,0,0.1);
+  transition: all 0.5s;
+  .card__img {
+    max-width: 100%;
+  }
+  .card__cost, .card__name-product {
+    font-weight: 500;
+  }
+  .card__rate {
+    color: $--color-theme-1;
+  }
+  .card__review-amount {
+    color: $--color-gray-600;
+  }
+  .card__btn-groups {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    .btn--buy-now {
+      @include btn($--color-theme-1, $--color-theme-1-400, 110px, 40px);
+      @include maxWidth(xl) {
+        @include btn($--color-theme-1, $--color-theme-1-400, unset, unset);
+      }
+    }
+    .btn--detail {
+      @include btn($--color-gray-800, $--color-gray-700, 110px, 40px);
+      @include maxWidth(xl) {
+        @include btn($--color-gray-800, $--color-gray-700, unset, unset);
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1.02);
+    .card__btn-groups {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.card--horizontal {
+  flex-direction: row;
+  box-shadow: 0px 1px 7.5px rgba(0,0,0,0.1);
+  transition: all 0.5s;
+  .card-body {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card__cost, .card__name-product {
+    font-weight: 500;
+  }
+  .card__rate {
+    color: $--color-theme-1;
+  }
+  .card__review-amount {
+    color: $--color-gray-600;
+  }
+  .card__btn-groups {
+    // visibility: hidden;
+    // opacity: 0;
+    transition: all 0.5s;
+    .btn--buy-now {
+      @include btn($--color-theme-1, $--color-theme-1-400, 110px, 40px);
+      @include maxWidth(xl) {
+        @include btn($--color-theme-1, $--color-theme-1-400, unset, unset);
+      }
+    }
+    .btn--detail {
+      @include btn($--color-gray-800, $--color-gray-700, 110px, 40px);
+      @include maxWidth(xl) {
+        @include btn($--color-gray-800, $--color-gray-700, unset, unset);
+      }
+    }
+  }
+  // &:hover {
+  //   transform: scale(1.02);
+  //   .card__btn-groups {
+  //     visibility: visible;
+  //     opacity: 1;
+  //   }
+  // }
+}
