@@ -1,0 +1,32 @@
+.footer {
+  p {
+    color: $--color-gray-600;
+  }
+  .footer__middle-side {
+    .list-bank-logo {
+      @include gridLayout(inline-grid, 4, null, row, 5px);
+    }
+    .container-icon {
+      @include flexBox(flex, center, center);
+      @include size(60px);
+      width: 60px;
+      height: 60px;
+      color: $--color-theme-1;
+      font-size: 1.5rem;
+      border: 1px solid $--color-theme-1;
+      @include maxWidth(xl) {
+        @include size(50px);
+      }
+    }
+  }
+  .dropdown-home-bottom {
+    @extend .dropdown-intro; 
+    width: 270px;
+    .home-bottom__item {
+      @extend .intro__item;
+    }
+    .home-bottom__link {
+      @extend .intro__link;
+    }
+  }
+}

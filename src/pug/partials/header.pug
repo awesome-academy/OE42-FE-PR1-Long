@@ -1,6 +1,6 @@
 .header
   .header__top-side
-    .navbar.navbar-expand-lg.navbar-light.bg-light.py-0
+    .navbar.navbar-expand-md.navbar-light.bg-light.py-0
       .container
         button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSocial' aria-controls='navbarSocial' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
@@ -27,15 +27,15 @@
     .container.d-flex.align-items-center
       .logo
         img(src="./assets/images/brand-logo.svg")
-      .hotline.d-flex.ms-auto
-        .me-17
+      .hotline.d-flex.ms-xl-auto.ms-6
+        .me-xl-17.me-4
           p.text-uppercase.mb-0.hotline__text Hotline
           p.mb-0.hotline__number (04) 9500 9650 - (04) 9500 8850
-        .me-17
+        .me-xl-17.me-4
           p.text-uppercase.mb-0.hotline__text Đặt hàng nhanh
           p.mb-0.hotline__number (04) 9500 9650 - (04) 9500 8850
       .search
         form.py-3.px-5.rounded-pill.search__form(action="") 
           input.search__field(placeholder="Tìm kiếm...")
-          button.search__btn
+          button.float-end.search__btn
             i.fas.fa-search
